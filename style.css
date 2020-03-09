@@ -1,0 +1,120 @@
+#tbGroups{
+	font-weight:bold;
+}
+#G1:hover{
+	background: #1985a1;
+	
+}
+#G2:hover{
+	background: #1985a1;
+	
+}
+#G3:hover{
+	background: #1985a1;
+	
+}
+#G4:hover{
+	background: #1985a1;
+	
+}
+#G5:hover{
+	background: #1985a1;
+	
+}
+#G6:hover{
+	background: #1985a1;
+	
+}
+#G7:hover{
+	background: #1985a1;
+	
+}
+#G8:hover{
+	background: #1985a1;
+	
+}
+#G9:hover{
+	background: #1985a1;
+	
+}
+#G10:hover{
+	background: #1985a1;
+	
+}
+#G1{
+	background:#1bddcb;
+}
+#G2{
+	background:#99d8d8;
+}
+#G3{
+	background:#f4f1bb;
+}
+#G4{
+	background:#c1d1e9;
+}
+#G5{
+	background:#e6ebe0;
+}
+#G6{
+	background:#729fca;
+}
+#G7{
+	background:#27a9d9;
+}
+#G8{
+	background:#69738b;
+}
+#G9{
+	background:#8b94aa;
+}
+#G10{
+	background:#ed6a5a;
+}
+td{
+	
+	border:1px solid gray;
+	padding:0px;
+}
+table{
+	margin:auto;
+	overflow-y: auto;
+	border-collapse: collapse;
+   	width:65%;
+}
+thead{
+	border:1px solid gray;
+}
+#yoo{
+
+	bottom:0;
+}
+#cooler{
+	position:sticky;
+	 top: 0;
+}
+#coolio{
+	position:sticky;
+	bottom:0;
+}
+#GroupsDisplay{
+	height: 50%;
+	padding-top: 20%;
+}
+#GroupsDisplay td{
+	height:150px;
+	text-align: center;
+}
+#ayh {
+     
+        top: 0;
+        bottom: 0;
+        height:1580px;
+    }
+svg{
+	width:630px;
+	height:400px;
+}
+rect{
+	fill:steelblue;
+}

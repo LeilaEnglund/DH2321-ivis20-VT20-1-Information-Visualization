@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project groups selection algorithm</title>
+	<script src="https://d3js.org/d3.v4.min.js"></script>
+  	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+
+ 	<link rel="stylesheet" type="text/css" href="style.css">
+		
+</head>
+<body>
+<div class="container-fluid">
+<div id="Modal" class="modal fade" role="dialog" data-keyboard="false" data-backdrop="static">
+  <div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content" style="width:960px; height:570px;">
+  <div class="modal-header">
+     <h4 class="modal-title">Modal Header</h4>
+  </div>
+	  <div class="modal-body">
+	  	<div class= "row">
+	  	<div class="col-2">
+		    <p>Group members.</p>
+		    <ul>
+		    	
+		    </ul>
+		</div>
+	  <div class="col-10 modalchart">
+			<svg>
+				
+			</svg>
+		</div>
+		</div>
+    </div>
+	  <div class="row">
+		  <div class="modal-footer">
+		    <button type="button" class="btn btn-default" id="cModal" data-dismiss="modal">Close</button>
+		  </div>
+	  </div>
+</div>
+
+  </div>
+</div>
+
+
+ 	<div class="row">
+		<div class="col-4 text-white text-center bg-dark" id="ayh">
+		
+			<h2 class="ss">Grouping tool</h2>
+			<p class="text-justify">This grouping tool support the creation of groups of five or six people for the Final Group Project in your Information Visualization 2020 course.</p>
+				<div class="form-group mb-5" aria-describedby="lgnd1">
+				<b><p>Group them based on their skills</p></b>
+				<div class="row mb-2">
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Math">Math</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Programming1">Programming</button>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Drawing">Drawing</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="UXE">UXE</button>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Communication">Communication</button>
+					</div>	
+				</div>
+
+			<small id="lgnd1" class="form-text text-muted text-white">**If you select an specific set of skills, you're considering the groups will be formed based on them**</small>
+
+			</div>
+			<div class="form-group" aria-describedby="lgnd2">
+				<b><p>Group them based on their interests</p></b>
+				<div class="row mb-3">
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Programming2">Programing</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Music">Music</button>
+					</div>
+				</div>
+				<div class="row mb-3">
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Design">Design</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Movies">Movies</button>
+					</div>
+				</div>
+				<div class="row mb-1">
+					<div class="col-12">
+						<button class="btn btn-primary btn-outline-info btn-block" id="Sports">Sports</button>
+					</div>	
+				</div>
+				<small id="lgnd2" class="form-text text-muted text-white">**By selecting an specific set of interests, the groups will be formed based on them, select the "any" checkbox if you want them to be formed based on their skills only**</small>
+			</div>
+				<div class="row pt-5">
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-success btn-block" id="grpN">Group Now!</button>
+					</div>
+					<div class="col-6">
+						<button class="btn btn-primary btn-outline-danger btn-block" id="reset">Reset</button>
+					</div>	
+			</div>
+		</div>
+		<div class="col-8" id="ayy">
+			<div class="visualize visual">
+				<div id="GroupsDisplay" style="display:none">
+					<table id ="tbGroups">
+						<tr>
+							<td id="G1" data-toggle="modal" data-id="1" data-target="#Modal">Group 1</td>
+							<td id="G2" data-toggle="modal" data-id="2" data-target="#Modal">Group 2</td>
+							<td id="G3" data-toggle="modal" data-id="3" data-target="#Modal">Group 3</td>
+							<td id="G4" data-toggle="modal" data-id="4" data-target="#Modal">Group 4</td>
+							<td id="G5" data-toggle="modal" data-id="5" data-target="#Modal">Group 5</td>
+						</tr>
+						<tr>
+							<td id="G6" data-toggle="modal" data-id="6" data-target="#Modal">Group 6</td>
+							<td id="G7"  data-toggle="modal" data-id="7" data-target="#Modal">Group 7</td>
+							<td id="G8" data-toggle="modal" data-id="8" data-target="#Modal">Group 8</td>
+							<td id="G9" data-toggle="modal" data-id="9" data-target="#Modal" >Group 9</td>
+							<td id="G10" data-toggle="modal" data-id="10" data-target="#Modal">Group 10</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="grouping.js"></script>
+</body>
+</html>
